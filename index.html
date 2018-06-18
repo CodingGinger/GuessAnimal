@@ -1,0 +1,23 @@
+<html>
+<head>
+<script type="text/javascript" src="newmain.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body onload="botPost(undefined);">
+
+<form name="myform">
+<p id="window1"></p>
+<input id="input1" type="text" autocomplete="off"><br>
+<input id="submit1" type="button" value="Submit" accesskey="Enter" onclick="post();">
+</form>
+<script type="text/javascript">
+var input = document.getElementById("input1");
+input.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("submit1").click();
+    }
+});
+</script>
+</body>
+</html>
